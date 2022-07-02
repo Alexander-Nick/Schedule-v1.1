@@ -1,0 +1,100 @@
+@import "fonts";
+@import "nullstyle";
+@import "header";
+
+body {
+    font-family: Montserrat;
+    background-color: rgb(49, 49, 49);
+    color: rgb(231, 231, 223);
+}
+
+
+.main {
+}
+.schedule {
+
+    display: none;
+    &__select{
+        width: 100%;
+        border: 1px solid #fff;
+        background-color: rgb(41, 41, 41);
+        color: #fff;
+        &.odd{
+        background-color: rgb(141, 141, 141);
+        color: rgb(20, 20, 20);
+        }
+        &.red{
+            background-color: rgb(124, 9, 9);
+            color: #fff;
+        }
+    }
+		&__container {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 25px;
+            & p{
+                text-align: center;
+                margin: 10px;
+            }
+		}
+
+		&__monday {
+        
+		}
+
+		&__day {
+            display: flex;
+            & > div {
+                border: 1px solid #000;
+            }
+		}
+        &__day:not(:last-child){
+            margin-bottom: 15px;
+        }
+
+		&__lesson-number {
+            width: 32px;
+            text-align: center;
+		}
+
+		&__tuesday {
+		}
+
+		&__wednesday {
+		}
+
+		&__thursday {
+		}
+
+		&__friday {
+		}
+}
+
+.classes {
+    max-width: 118px;
+    flex: 1 1 auto;
+    text-align: center;
+}/*
+.first {
+}
+.second {
+}
+.third {
+}
+.forth {
+}
+.fifth {
+}
+.sixth {
+}
+.seventh {
+}
+.eighth {
+}
+.nineth {
+}
+.tenth {
+}
+.eleventh {
+}
+*/

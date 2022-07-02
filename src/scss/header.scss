@@ -1,0 +1,271 @@
+._container{
+   max-width: 1330px;
+   margin: 0 auto;
+}
+.header {
+
+   
+
+   &__menu {
+      display: flex;
+      width: 100%;
+      & > div {
+         text-align: center;
+         width: 33.33333%;
+         font-size: 16px;
+         font-weight: 500;
+       }
+      & >:not(:last-child){
+         cursor: pointer;
+         padding: 15px;
+         background-color: rgb(0, 119, 119);
+         border-right: 2px solid rgb(187, 248, 163);
+         transition: all .3s linear;
+         &:hover{
+            color: rgb(53, 53, 53);
+         }
+      }
+      
+   }
+
+   &__settings {
+      &.active{
+         background-color: rgb(1, 160, 160);
+         color: rgb(73, 70, 70);
+      }
+   }
+
+   &__add-teacher {
+      &.active{
+         background-color: rgb(1, 160, 160);
+         color: rgb(73, 70, 70);
+      }
+   }
+
+   &__check-schedule {
+      padding: 10px 0;
+      & button{
+         background-color: rgb(0, 119, 119);
+         transition: all .3s linear;
+         padding: 5px;
+         font-size: 16px;
+         border-radius: 3px;
+         color: aliceblue;
+         
+         &:hover{
+            background-color: rgb(1, 160, 160);
+            color: rgb(53, 53, 53);
+         }
+      }
+   }
+
+   &__option{
+      margin-left: 20px;
+      &:not(:last-child){
+         margin-bottom: 15px;
+      }
+      & .radio{
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid rgb(12, 11, 11);
+        background-color: grey;
+        position: relative;
+        transition: all 0.2s linear;
+        &.active{
+           background-color: green;
+        }
+        &.active::before{
+           content: '';
+           display: inline-block;
+           width:8px;
+           height: 8px;
+           background-color: #000;
+           border-radius: 50%;
+           position: absolute;
+           left: 3px;
+           top: 3px;
+        }
+        & span{
+            position: absolute;
+            left: 20px;
+      }
+      }
+   }
+   &__settings-content {
+      overflow: hidden;
+      background-color: rgb(0, 119, 119);
+      height: 0;
+      transition: all .2s linear;
+      &.active{
+         height: 230px;
+         background-color: rgb(1, 160, 160);
+         transition: all .2s linear;
+      }
+      & p{
+         font-style: italic;
+         padding: 10px;
+      }
+      & .hidden{
+         display: none;
+      }
+      & button{
+         margin: 15px;
+         color: #000;
+         background-color: green;
+         transition: all .3s linear;
+         padding: 5px;
+         font-size: 16px;
+         border-radius: 3px;
+         
+         &:hover{
+            background-color: rgb(51, 56, 46);
+            color: rgb(184, 196, 196);
+         }
+      }
+     
+   }
+   &__lessons{
+      padding: 15px;
+   }
+}
+
+.lessons {
+
+   &__title {
+      font-style: italic;
+   }
+
+   &__input {
+      padding: 2px;
+      width: 28px;
+      height: 20px;
+      border-radius: 2px;
+      border: 1px solid rgb(29, 82, 77);
+   }
+
+   & .alert{
+      color: rgb(184, 0, 0);
+      font-weight: 600;
+      display: none;
+   }
+   &__advice{
+      font-style: italic;
+      text-decoration: underline;
+      cursor: default;
+   }
+}
+
+.header {
+
+   &__teacher-content {
+      width: 100%;
+      background-color: rgb(0, 119, 119);
+   }
+}
+.teacher {
+
+   &.active{
+      height: auto;
+      background-color: rgb(1, 160, 160);
+   }
+   overflow: hidden;
+   height: 0px;
+   transition: all .2s linear;
+
+   &__records{
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      & > div {
+         background-color: rgb(67, 83, 79);
+         color: #fff;
+         margin:0 2px 10px 2px;
+         padding: 5px;
+         border: 1px solid #fff;
+         width: 33%;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+   }
+
+   &__edit{
+      margin-right: 15px;
+   }
+   &__edit, &__del{
+      display: inline-block;
+      background-color: #000;
+      cursor: pointer;
+      padding: 5px;
+      color: #fff;
+      border-radius: 5px;
+   }
+
+   &__info {
+      padding: 15px 25px;
+   }
+
+   &__initials {
+      border: 2px solid #fff;
+      width: 350px;
+      border-radius: 3px;
+      padding: 3px;
+      margin-right: 25px;
+      display: block;
+      margin-bottom: 15px;
+   }
+
+   &__subject {
+      border: 2px solid #fff;
+      border-radius: 3px;
+      padding: 3px;
+      display: inline-block;
+      margin-right: 45px;
+   }
+
+   &__del-subject{
+      padding: 3px 8px;
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+      margin: 0 15px;
+      border-radius: 2px;
+      font-weight: 600;
+   }
+
+   &__checkboxes {
+      display: inline-block;
+      border-radius: 3px;
+      border: 2px solid rgb(0, 119, 119);
+      padding: 5px 5px;
+      margin: 10px 0;
+      & > input:not(:last-child){
+         margin-right: 15px;
+      }
+      & span{
+         cursor: default;
+      }
+   }
+
+   &__add-subject {
+      display: block;
+      margin-bottom: 25px;
+      padding:5px;
+      border-radius: 3px;
+      background-color: rgb(236, 252, 235);
+   }
+
+   &__done {
+      display: block;
+      padding:5px;
+      border-radius: 3px;
+      background-color: rgb(236, 252, 235);
+   }
+}
+
+.lesson-element{
+   border-bottom: 2px solid #fff;
+   margin-bottom: 15px;
+}

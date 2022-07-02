@@ -1,0 +1,472 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2"), url("../fonts/Montserrat-VariableFont_wght.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Italic-VariableFont_wght.woff2") format("woff2"), url("../fonts/Montserrat-Italic-VariableFont_wght.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/*Обнуление*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+
+._container {
+  max-width: 1330px;
+  margin: 0 auto;
+}
+
+.header__menu {
+  display: flex;
+  width: 100%;
+}
+
+.header__menu > div {
+  text-align: center;
+  width: 33.33333%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header__menu > :not(:last-child) {
+  cursor: pointer;
+  padding: 15px;
+  background-color: rgb(0, 119, 119);
+  border-right: 2px solid rgb(187, 248, 163);
+  transition: all 0.3s linear;
+}
+
+.header__menu > :not(:last-child):hover {
+  color: rgb(53, 53, 53);
+}
+
+.header__settings.active {
+  background-color: rgb(1, 160, 160);
+  color: rgb(73, 70, 70);
+}
+
+.header__add-teacher.active {
+  background-color: rgb(1, 160, 160);
+  color: rgb(73, 70, 70);
+}
+
+.header__check-schedule {
+  padding: 10px 0;
+}
+
+.header__check-schedule button {
+  background-color: rgb(0, 119, 119);
+  transition: all 0.3s linear;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 3px;
+  color: aliceblue;
+}
+
+.header__check-schedule button:hover {
+  background-color: rgb(1, 160, 160);
+  color: rgb(53, 53, 53);
+}
+
+.header__option {
+  margin-left: 20px;
+}
+
+.header__option:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.header__option .radio {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid rgb(12, 11, 11);
+  background-color: grey;
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.header__option .radio.active {
+  background-color: green;
+}
+
+.header__option .radio.active::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+}
+
+.header__option .radio span {
+  position: absolute;
+  left: 20px;
+}
+
+.header__settings-content {
+  overflow: hidden;
+  background-color: rgb(0, 119, 119);
+  height: 0;
+  transition: all 0.2s linear;
+}
+
+.header__settings-content.active {
+  height: 230px;
+  background-color: rgb(1, 160, 160);
+  transition: all 0.2s linear;
+}
+
+.header__settings-content p {
+  font-style: italic;
+  padding: 10px;
+}
+
+.header__settings-content .hidden {
+  display: none;
+}
+
+.header__settings-content button {
+  margin: 15px;
+  color: #000;
+  background-color: green;
+  transition: all 0.3s linear;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.header__settings-content button:hover {
+  background-color: rgb(51, 56, 46);
+  color: rgb(184, 196, 196);
+}
+
+.header__lessons {
+  padding: 15px;
+}
+
+.lessons__title {
+  font-style: italic;
+}
+
+.lessons__input {
+  padding: 2px;
+  width: 28px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid rgb(29, 82, 77);
+}
+
+.lessons .alert {
+  color: rgb(184, 0, 0);
+  font-weight: 600;
+  display: none;
+}
+
+.lessons__advice {
+  font-style: italic;
+  text-decoration: underline;
+  cursor: default;
+}
+
+.header__teacher-content {
+  width: 100%;
+  background-color: rgb(0, 119, 119);
+}
+
+.teacher {
+  overflow: hidden;
+  height: 0px;
+  transition: all 0.2s linear;
+}
+
+.teacher.active {
+  height: auto;
+  background-color: rgb(1, 160, 160);
+}
+
+.teacher__records {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.teacher__records > div {
+  background-color: rgb(67, 83, 79);
+  color: #fff;
+  margin: 0 2px 10px 2px;
+  padding: 5px;
+  border: 1px solid #fff;
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.teacher__edit {
+  margin-right: 15px;
+}
+
+.teacher__edit,
+.teacher__del {
+  display: inline-block;
+  background-color: #000;
+  cursor: pointer;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.teacher__info {
+  padding: 15px 25px;
+}
+
+.teacher__initials {
+  border: 2px solid #fff;
+  width: 350px;
+  border-radius: 3px;
+  padding: 3px;
+  margin-right: 25px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.teacher__subject {
+  border: 2px solid #fff;
+  border-radius: 3px;
+  padding: 3px;
+  display: inline-block;
+  margin-right: 45px;
+}
+
+.teacher__del-subject {
+  padding: 3px 8px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 15px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.teacher__checkboxes {
+  display: inline-block;
+  border-radius: 3px;
+  border: 2px solid rgb(0, 119, 119);
+  padding: 5px 5px;
+  margin: 10px 0;
+}
+
+.teacher__checkboxes > input:not(:last-child) {
+  margin-right: 15px;
+}
+
+.teacher__checkboxes span {
+  cursor: default;
+}
+
+.teacher__add-subject {
+  display: block;
+  margin-bottom: 25px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgb(236, 252, 235);
+}
+
+.teacher__done {
+  display: block;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgb(236, 252, 235);
+}
+
+.lesson-element {
+  border-bottom: 2px solid #fff;
+  margin-bottom: 15px;
+}
+
+body {
+  font-family: Montserrat;
+  background-color: rgb(49, 49, 49);
+  color: rgb(231, 231, 223);
+}
+
+.schedule {
+  display: none;
+}
+
+.schedule__select {
+  width: 100%;
+  border: 1px solid #fff;
+  background-color: rgb(41, 41, 41);
+  color: #fff;
+}
+
+.schedule__select.odd {
+  background-color: rgb(141, 141, 141);
+  color: rgb(20, 20, 20);
+}
+
+.schedule__select.red {
+  background-color: rgb(124, 9, 9);
+  color: #fff;
+}
+
+.schedule__container {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.schedule__container p {
+  text-align: center;
+  margin: 10px;
+}
+
+.schedule__day {
+  display: flex;
+}
+
+.schedule__day > div {
+  border: 1px solid #000;
+}
+
+.schedule__day:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.schedule__lesson-number {
+  width: 32px;
+  text-align: center;
+}
+
+.classes {
+  max-width: 118px;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/*
+.first {
+}
+.second {
+}
+.third {
+}
+.forth {
+}
+.fifth {
+}
+.sixth {
+}
+.seventh {
+}
+.eighth {
+}
+.nineth {
+}
+.tenth {
+}
+.eleventh {
+}
+*/

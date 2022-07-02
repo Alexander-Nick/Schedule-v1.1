@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220702165923">
+    <title>Schedule v1.1</title>
+</head>
+<body>
+    <header class="header">
+   <div class="header__container _container">
+      <div class="header__body">
+         <div class="header__menu">
+            <div class="header__settings">
+               Настройки
+            </div>
+            <div class="header__add-teacher">
+               Добавить учителя
+            </div>
+            <div class="header__check-schedule">
+               <button class="header__button button">Проверить расписание</button>
+            </div>
+         </div>
+         <div class="header__settings-content">
+            <div class="header__theme">
+               <p>
+                  Выберите тему:
+               </p>
+               <div class="header__option">
+                  <input class="hidden" type="radio" name="theme" id="dark" checked>
+                  <label class="radio active" for="dark"><span>Тёмная</span></label>
+               </div>
+               <div class="header__option">
+                  <input class="hidden" type="radio" name="theme" id="fair">
+                  <label class="radio" for="fair"><span>Светлая</span></label>
+               </div>
+            </div>
+            <div class="header__lessons lessons">
+               <span class="lessons__title">Количество уроков в день:</span>
+               <input class="lessons__input" type="text"> <span class="alert">*Введите число</span>
+               <p class="lessons__advice">* Рекомендуется заполнять после добавления всех учителей</p>
+            </div>
+            <button class="save-settings">Сохранить</button>
+         </div>
+         <div class="header__teacher-content teacher">
+            <div class="teacher__info">
+               <div class="script-for">
+                  <input type="text" placeholder="Введите ФИО" class="teacher__initials">
+                  <div class="lesson-element">
+                     <input type="text" placeholder="Предмет" class="teacher__subject">
+                     <div class="teacher__checkboxes">
+                        <span>1</span> <input type="checkbox" name="1" id="" class="teacher__checkbox">
+                        <span>2</span> <input type="checkbox" name="2" id="" class="teacher__checkbox">
+                        <span>3</span> <input type="checkbox" name="3" id="" class="teacher__checkbox">
+                        <span>4</span> <input type="checkbox" name="4" id="" class="teacher__checkbox">
+                        <span>5</span> <input type="checkbox" name="5" id="" class="teacher__checkbox">
+                        <span>6</span> <input type="checkbox" name="6" id="" class="teacher__checkbox">
+                        <span>7</span> <input type="checkbox" name="7" id="" class="teacher__checkbox">
+                        <span>8</span> <input type="checkbox" name="8" id="" class="teacher__checkbox">
+                        <span>9</span> <input type="checkbox" name="9" id="" class="teacher__checkbox">
+                        <span>10</span> <input type="checkbox" name="10" id="" class="teacher__checkbox">
+                        <span>11</span> <input type="checkbox" name="11" id="" class="teacher__checkbox">
+                     </div>
+                  </div>
+               </div>
+               <button class="teacher__add-subject">Добавить предмет</button>
+               <button class="teacher__done">Готово</button>
+               <div class="teacher__records">
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+
+
+    <main class="main">
+        <div class="schedule">
+            <div class="schedule__container _container">
+                <div class="schedule__monday">
+                    <p>Понедельник</p>
+                    
+                    <div class="schedule__day">
+                        <div name="0" class="schedule__lesson-number">№</div>
+                        <div class="classes first">
+                            1
+                        </div>
+                        <div class="classes second">
+                            2
+                        </div>
+                        <div class="classes third">
+                            3
+                        </div>
+                        <div class="classes forth">
+                            4
+                        </div>
+                        <div class="classes fifth">
+                            5
+                        </div>
+                        <div class="classes sixth">
+                            6
+                        </div>
+                        <div class="classes seventh">
+                            7
+                        </div>
+                        <div class="classes eighth">
+                            8
+                        </div>
+                        <div class="classes nineth">
+                            9
+                        </div>
+                        <div class="classes tenth">
+                            10
+                        </div>
+                        <div class="classes eleventh">
+                            11
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule__tuesday">
+                    <p>Вторник</p>
+                    <div class="schedule__day">
+                        <div name="0" class="schedule__lesson-number">№</div>
+                        <div class="classes first">
+                            1
+                        </div>
+                        <div class="classes second">
+                            2
+                        </div>
+                        <div class="classes third">
+                            3
+                        </div>
+                        <div class="classes forth">
+                            4
+                        </div>
+                        <div class="classes fifth">
+                            5
+                        </div>
+                        <div class="classes sixth">
+                            6
+                        </div>
+                        <div class="classes seventh">
+                            7
+                        </div>
+                        <div class="classes eighth">
+                            8
+                        </div>
+                        <div class="classes nineth">
+                            9
+                        </div>
+                        <div class="classes tenth">
+                            10
+                        </div>
+                        <div class="classes eleventh">
+                            11
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule__wednesday">
+                    <p>Среда</p>
+                    <div class="schedule__day">
+                        <div name="0" class="schedule__lesson-number">№</div>
+                        <div class="classes first">
+                            1
+                        </div>
+                        <div class="classes second">
+                            2
+                        </div>
+                        <div class="classes third">
+                            3
+                        </div>
+                        <div class="classes forth">
+                            4
+                        </div>
+                        <div class="classes fifth">
+                            5
+                        </div>
+                        <div class="classes sixth">
+                            6
+                        </div>
+                        <div class="classes seventh">
+                            7
+                        </div>
+                        <div class="classes eighth">
+                            8
+                        </div>
+                        <div class="classes nineth">
+                            9
+                        </div>
+                        <div class="classes tenth">
+                            10
+                        </div>
+                        <div class="classes eleventh">
+                            11
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule__thursday">
+                    <p>Четверг</p>
+                    <div class="schedule__day">
+                        <div name="0" class="schedule__lesson-number">№</div>
+                        <div class="classes first">
+                            1
+                        </div>
+                        <div class="classes second">
+                            2
+                        </div>
+                        <div class="classes third">
+                            3
+                        </div>
+                        <div class="classes forth">
+                            4
+                        </div>
+                        <div class="classes fifth">
+                            5
+                        </div>
+                        <div class="classes sixth">
+                            6
+                        </div>
+                        <div class="classes seventh">
+                            7
+                        </div>
+                        <div class="classes eighth">
+                            8
+                        </div>
+                        <div class="classes nineth">
+                            9
+                        </div>
+                        <div class="classes tenth">
+                            10
+                        </div>
+                        <div class="classes eleventh">
+                            11
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule__friday">
+                    <p>Пятница</p>
+                    <div class="schedule__day">
+                        <div name="0" class="schedule__lesson-number">№</div>
+                        <div class="classes first">
+                            <div>1</div>
+                        </div>
+                        <div class="classes second">
+                            <div>2</div>
+                        </div>
+                        <div class="classes third">
+                            <div>3</div>
+                        </div>
+                        <div class="classes forth">
+                            <div>4</div>
+                        </div>
+                        <div class="classes fifth">
+                            <div>5</div>
+                        </div>
+                        <div class="classes sixth">
+                            <div>6</div>
+                        </div>
+                        <div class="classes seventh">
+                            <div>7</div>
+                        </div>
+                        <div class="classes eighth">
+                            <div>8</div>
+                        </div>
+                        <div class="classes nineth">
+                            <div>9</div>
+                        </div>
+                        <div class="classes tenth">
+                            <div>10</div>
+                        </div>
+                        <div class="classes eleventh">
+                            <div>11</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+   
+</footer>
+    <script src="js/app.min.js?_v=20220702165923"></script>
+</body>
+</html>
